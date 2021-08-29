@@ -51,8 +51,6 @@ namespace HelloASPDotNET.Controllers
         }
 
 
-
-
         //TODO: Include a new public static method, CreateMessage, that takes a name as well as a language string.
         //Based on the language string, you’ll display the proper greeting.
         public static string CreateMessage (string name, string language)
@@ -76,7 +74,7 @@ namespace HelloASPDotNET.Controllers
                 greeting = "Kon'nichiwa";
             }
 
-            return greeting + ", " + name + "!";
+            return greeting + ", " + name + "!!!!!!!";
             
         }
 
