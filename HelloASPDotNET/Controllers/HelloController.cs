@@ -74,7 +74,7 @@ namespace HelloASPDotNET.Controllers
                 greeting = "Kon'nichiwa";
             }
 
-            return greeting + ", " + name + "!!!!!!!";
+            return greeting + ", " + name + "!";
             
         }
 
