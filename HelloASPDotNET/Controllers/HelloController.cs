@@ -74,7 +74,7 @@ namespace HelloASPDotNET.Controllers
                 greeting = "Kon'nichiwa";
             }
 
-            return greeting + ", " + name + "!";
+            return "<h1 style='color:purple; font-style:oblique; font-family:Lucida Handwriting;'>" + greeting + ", " + name + "!" + "</h1>";
             
         }
 
