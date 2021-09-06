@@ -8,53 +8,25 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HelloASPDotNET.Controllers
 {
-    [Route("/helloworld")]
     public class HelloController : Controller
     {
         // GET: /<controller>/
         [HttpGet]
         public IActionResult Index()
         {
-            string html = "<form method='post' action='/helloworld/greeting'>" +
+            string html = "<form method='post' action='/hello'>" +
                 "<input type='text' name='name' />" +
-
-                "<select name = 'language'> " +
-                    "<option value = ''> --Please choose a Language-- </option>" +
-                    "<option value = 'English'> English </option>" +
-                    "<option value = 'Spanish'> Spanish </option>" +
-                    "<option value = 'French'> French </option>" +
-                    "<option value = 'German'> German </option>" +
-                    "<option value = 'Japanese'> Japanese </option>" +
-                "</select>" +
                 "<input type='submit' value='Greet Me!' />" +
                 "</form>";
 
             return Content(html, "text/html");
         }
 
-        // GET: /hello/welcome
-        //[HttpGet("welcome/{name?}")]
-        //[HttpPost]
-        //public IActionResult Welcome(string name = "World")
-        //{
-        //    return Content("<h1>Welcome to my app, " + name + "!</h1>", "text/html");
-           
-        //}
-
-
-        // GET: /helloworld/greeting
-        //[HttpGet("greeting/{language?}/{name?}")] //dont need this lol
-        [HttpPost("greeting")]
-        public IActionResult Greeting(string name = "World", string language = "English")
+        [HttpPost]
+        [Route("/hello")]
+        public IActionResult Welcome(string name = "World")
         {
-            return Content(CreateMessage(name, language), "text/html");
+            return Content("<h1>Welcome to my app, " + name + "!</h1>", "text/html");
         }
-
-
-        //TODO: Include a new public static method, CreateMessage, that takes a name as well as a language string.
-        //Based on the language string, you’ll display the proper greeting.
-       
-
-
     }
 }
