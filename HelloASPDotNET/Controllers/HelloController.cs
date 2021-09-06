@@ -53,30 +53,7 @@ namespace HelloASPDotNET.Controllers
 
         //TODO: Include a new public static method, CreateMessage, that takes a name as well as a language string.
         //Based on the language string, you’ll display the proper greeting.
-        public static string CreateMessage (string name, string language)
-        {
-            string greeting = "";
-
-            if (language == "English")
-            {
-                greeting = "Hello";
-            } else if (language == "Spanish")
-            {
-                greeting = "Hola";
-            } else if (language == "French")
-            {
-                greeting = "Bonjour";
-            } else if (language == "German")
-            {
-                greeting = "Guten Tag";
-            } else if (language == "Japanese")
-            {
-                greeting = "Kon'nichiwa";
-            }
-
-            return "<h1 style='color:purple; font-style:oblique; font-family:Lucida Handwriting;'>" + greeting + ", " + name + "!" + "</h1>";
-            
-        }
+       
 
 
     }
