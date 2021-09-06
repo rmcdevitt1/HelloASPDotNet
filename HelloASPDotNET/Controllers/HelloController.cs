@@ -43,7 +43,7 @@ namespace HelloASPDotNET.Controllers
 
 
         // GET: /helloworld/greeting
-        [HttpGet("greeting/{language?}/{name?}")]
+        //[HttpGet("greeting/{language?}/{name?}")] //dont need this lol
         [HttpPost("greeting")]
         public IActionResult Greeting(string name = "World", string language = "English")
         {
